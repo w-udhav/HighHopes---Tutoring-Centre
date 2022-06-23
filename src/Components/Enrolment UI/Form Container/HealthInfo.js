@@ -20,11 +20,10 @@ export class HealthInfo extends Component {
     }
     
     const {values, handleChange} = this.props;
-    console.log(values)
 
     return (
       <div className='healthInfo'>
-          <h3>{values} Child's Health and Medical Conditions </h3>
+          <h3> Child's Health and Medical Conditions </h3>
             <div className="condition-wrapper">
                 <FormControl fullWidth>
                     <InputLabel id='alergy-food'> Is your child alergic to any food? </InputLabel>
