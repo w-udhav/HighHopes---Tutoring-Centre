@@ -1,0 +1,77 @@
+.assessment-wrapper{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2rem;
+    overflow: hidden;
+
+    & .assessment-container{
+        width: 100%;
+        // height: 100px;
+        background: linear-gradient(135deg, #35405C 40%,#2F3B52  40% 60%, #222d43 60% 100%);
+        box-shadow: 4px 4px 5px 1px #06283D;
+
+        display: flex;
+        flex-wrap: wrap;
+
+        & .assessment-title{
+            // border: 1px solid white;
+
+            // color: transparent;
+            color: white;
+            font-weight: bold;
+            // background:linear-gradient(to right, grey, white);
+            text-shadow:2px 6px 2px black;
+            // background-clip: text;
+            font-size: 1.9rem;
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: 1.5px;
+            text-align: center;
+            
+            padding: 10px;
+
+        }
+
+        & .assessment-button{
+            // border: 1px solid white;
+        
+            text-align: center;
+            
+            & #btn{
+                font-size: 17px;
+                height: 100%;
+            }
+        }
+    }
+}
+
+// #06283D
+
+@media (min-width:570px){
+    .assessment-title{
+        flex: 0.6;
+        margin: 40px;
+
+    }
+    .assessment-button{
+        flex: 0.4;
+        margin: 40px;
+    }
+}
+
+@media (max-width:570px){
+    .assessment-title{
+        flex: 1;
+        margin: 40px 40px 10px;
+    }
+    .assessment-button{
+        flex: 1;
+        height: 60px;
+        
+        margin: 10px 40px 40px;
+        
+        
+        & #btn{
+            width: 200px;
+        }
+    }
+}

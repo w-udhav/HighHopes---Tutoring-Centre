@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import './_app.scss';
+import { Routes, Route } from 'react-router-dom';
+import Home from './Components/Home UI/Home';
+import Navbar from './Components/navbar/Navbar';
+import EnrolForm from './Components/Enrolment UI/EnrolForm';
 
 function App() {
   return (
+    // <LocalizationProvider dateAdapter={AdapterDateFns}>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Navbar /> */}
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/enrol' element={<EnrolForm />} />
+      </Routes>
     </div>
+    // </LocalizationProvider>
   );
 }
 
