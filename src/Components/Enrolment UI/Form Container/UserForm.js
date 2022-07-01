@@ -3,46 +3,50 @@ import ChildInfo from './ChildInfo';
 import ParentInfo from './ParentInfo';
 import HealthInfo from './HealthInfo';
 import EmergencyInfo from './EmergencyInfo';
+import TermsConditions from './TermsConditions';
 
 export class UserForm extends Component {
-    state = {
+
+        state={
         // form 1 (child)
-        step:1,
-        firstName : '',
-        lastName: '',
-        dob: null,
-        gender:'',
-        schoolName: '',
-        year: null,
-        homeAdd: '',
-        subUrb: '',
-        postCode: null,
-        studentEmail: '',
-        
-        // form 2 (parent)
-        parentName1: '',
-        relation1 : '',
-        parentEmail1: '',
-        parentCont1: null,
+            step:1,
+            firstName : '',
+            lastName: '',
+            dob: null,
+            gender:'',
+            schoolName: '',
+            year: null,
+            homeAdd: '',
+            subUrb: '',
+            postCode: null,
+            studentEmail: '',
+            
+            // form 2 (parent)
+            parentName1: '',
+            relation1 : '',
+            parentEmail1: '',
+            parentCont1: null,
 
-        parentName2: '',
-        relation2 : '',
-        parentEmail2: '',
-        parentCont2: null,
-
-
-        // form 3
-        authPerson1:'',
-        authCont1: null,
-        authRelation1:'',
-
-        authPerson2:'',
-        authCont2: null,
-        authRelation2:'',
+            parentName2: '',
+            relation2 : '',
+            parentEmail2: '',
+            parentCont2: null,
 
 
-        // form 4
-    }
+            // form 3
+            authPerson1:'',
+            authCont1: null,
+            authRelation1:'',
+
+            authPerson2:'',
+            authCont2: null,
+            authRelation2:'',
+
+
+            // form 4
+            agree:false,
+        }
+    
 
     // Proceed to next step
     nextStep = () => {
@@ -70,12 +74,14 @@ export class UserForm extends Component {
     const { firstName, lastName, dob, gender, schoolName, year, homeAdd, subUrb, postCode, studentEmail,
             parentName1, relation1, parentEmail1, parentCont1, parentName2, relation2, parentEmail2, parentCont2,
             authPerson1,authCont1,authRelation1,authPerson2,authCont2,authRelation2,
+            agree
 
             } = this.state;
 
     const values = { firstName, lastName, dob, gender, schoolName, year, homeAdd, subUrb, postCode, studentEmail, 
                      parentName1, relation1, parentEmail1, parentCont1, parentName2, relation2, parentEmail2, parentCont2,
                      authPerson1,authCont1,authRelation1,authPerson2,authCont2,authRelation2,
+                     agree
                     };
 
     switch(step) {
@@ -84,7 +90,7 @@ export class UserForm extends Component {
                 <ChildInfo
                     nextStep = {this.nextStep}
                     handleChange={this.handleChange}
-                    value={values}
+                    values={values}
                 />
             )
         case 2:
@@ -93,7 +99,7 @@ export class UserForm extends Component {
                     nextStep={this.nextStep}
                     prevStep={this.prevStep}
                     handleChange={this.handleChange}
-                    value={values}
+                    values={values}
                 />
             )
         case 3:
@@ -102,7 +108,7 @@ export class UserForm extends Component {
                     nextStep={this.nextStep}
                     prevStep={this.prevStep}
                     handleChange={this.handleChange}
-                    value={values}
+                    values={values}
                 />
             )
         case 4:
@@ -111,7 +117,16 @@ export class UserForm extends Component {
                     nextStep={this.nextStep}
                     prevStep={this.prevStep}
                     handleChange={this.handleChange}
-                    value={values}
+                    values={values}
+                />
+            )
+        case 5:
+            return(
+                <TermsConditions
+                    nextStep={this.nextStep}
+                    prevStep={this.prevStep}
+                    handleChange={this.handleChange}
+                    values={values}
                 />
             )
     }

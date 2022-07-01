@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Staatliches&display=swap');
+
+.home {
+
+    & .intro-wrapper {
+        box-sizing: border-box;
+
+        background: url('../../assets/bench-accounting-nvzvOPQW0gc-unsplash.jpg');
+        background-position: bottom;
+        height: 100vh;
+        background-size: cover;
+        z-index: -1;
+
+        // img{
+        //     width: 99.9%;
+        //     box-sizing: border-box;
+        //     position: absolute;
+        //     z-index: -2;
+        // }
+
+        & .intro-context {
+            box-sizing: border-box;
+            padding: 10px 10%;
+
+            & p {
+                border: 1px solid;
+                padding: 15px;
+                border-radius: 20px 0;
+                z-index: 1;
+                max-width: max-content;
+
+                background: rgba(255, 255, 255, 0.711);
+
+                // line-height: 4.1rem;
+                font-family: 'Staatliches', cursive;
+                // font-weight: bold;
+                text-align: left;
+                // font-size: 3.1rem;
+                word-spacing: 3px;
+                text-align: center;
+            }
+        }
+    }
+
+    & .box-container{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        margin: 80px 0;
+        box-sizing: border-box;
+
+
+        & .box1-Q{
+            // border: 1px solid;
+            width: 100%;
+
+        }
+
+        & .box2-F{
+            // border: 1px solid;
+            width: 100%;
+        }
+
+    }
+
+    & .filler-wrapper{
+        background-color: grey;
+        margin: 0;
+
+        img{
+            margin: 0;
+            padding: 0;
+            width: 250px;
+            border-radius: 10px;
+        }
+    }
+
+    & .freeForm{
+        background: black;
+        
+    }
+}
+
+
+
+
+
+#span1{
+    // background-color: crimson;
+    color: green;
+    padding: 4px;
+}
+#span2{
+    color: crimson;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:450px) {
+    .intro-context p{
+        font-size: 3.1rem;
+        line-height: 4.1rem;
+    }
+}
+
+@media (min-width:600px){
+    .box-container{
+        
+    }
+
+    .inBox1{
+        margin-left: 60%;
+        width: max-content;
+        transform: translate(-60%);
+    }
+    .inBox2{
+        margin-left: 40%;
+        width: max-content;
+        transform: translate(-40%);
+    }
+
+}
+
+
+
+
+@media (max-width:450px) {
+    .intro-context p{
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+}
+
+@media (max-width:600px){
+    .box-container{
+        flex-direction: column;
+    }
+
+    .inBox1{
+        margin-left: 50%;
+        width: max-content;
+        transform: translate(-50%);
+    }
+    .inBox2{
+        margin-left: 50%;
+        width: max-content;
+        transform: translate(-50%);
+    }
+
+}

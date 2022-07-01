@@ -18,7 +18,7 @@ export class EmergencyInfo extends Component {
     return (
       <div>
            <h3> Emergency Contact <code> (other than parent's or guardian's) </code> </h3>
-           <text> If the child's parents/guardian can not be contacted, the following nominated authorized person will be contacted </text>
+           <p> If the child's parents/guardian can not be contacted, the following nominated authorized person will be contacted </p>
 
             <h4> (1) Authorized Contact Person </h4>
 

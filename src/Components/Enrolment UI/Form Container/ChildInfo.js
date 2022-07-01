@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import { FormControlLabel, FormLabel, Radio, RadioGroup, TextField , FormControl, Button} from '@mui/material';
 import '../_enrol.scss'
-import { DatePicker, LocalizationProvider, StaticDatePicker } from '@mui/x-date-pickers';
-// import { FormControl } from 'react-';
 
 
 export class ChildInfo extends Component {
@@ -13,7 +11,6 @@ export class ChildInfo extends Component {
 
   render() {
     const { values, handleChange } = this.props;
-
 
     //   for date 
     var curr = new Date();
@@ -26,8 +23,8 @@ export class ChildInfo extends Component {
         <h3> Child's Information </h3>
 
         {/* Row 1 */}
-        <div className="child-name child-wrapper">
-            <div className="child-name-first child-n">
+        <div className="child-wrapper">
+            <div className="child-n">
                 <TextField
                     label='First Name'
                     autoComplete='new'
@@ -36,7 +33,7 @@ export class ChildInfo extends Component {
                     onChange={handleChange('firstName')}
                 />
             </div>
-            <div className="child-name-last child-n">
+            <div className="child-n">
                 <TextField
                     label='Last Name'
                     autoComplete='new'
@@ -72,18 +69,18 @@ export class ChildInfo extends Component {
                     >
                         <FormControlLabel
                             value='female'
-                            control={<Radio size='10' />}
+                            control={<Radio size='small' />}
                             label='Female'
                             
                         />
                         <FormControlLabel
                             value='male'
-                            control={<Radio size='10' />}
+                            control={<Radio size='small' />}
                             label='Male'
                         />
                         <FormControlLabel
                             value='other'
-                            control={<Radio size='10' />}
+                            control={<Radio size='small' />}
                             label='Other'
                         />
                     </RadioGroup>
