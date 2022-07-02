@@ -8,15 +8,15 @@ import { AirOutlined } from '@mui/icons-material';
 
 const Programme = () => {
 
-    const [value, setValue] = useState(0);
+    // const [value, setValue] = useState(0);
 
-    const getValue = e => {
-        setValue(e.target.value)
-    }
+    // const getValue = e => {
+    //     setValue(e.target.value)
+    // }
 
-    useEffect(() => {
+    // useEffect(() => {
 
-    }, [value]);
+    // }, [value]);
 
     return (
         <div className="prog-wrapper">
@@ -41,7 +41,7 @@ const Programme = () => {
             </div>
 
             <div className="sessions-flexbox">
-                <div className="sessions">
+                <div className="sessions s1">
                     <div>
                         <h3> Weekly Sessions & practice </h3>
                         <p>
@@ -56,7 +56,7 @@ const Programme = () => {
                     </div>
                 </div>
 
-                <div className="sessions">
+                <div className="sessions s2">
                     <div>
                         <h3> Small Groups of up to 5 </h3>
                         <p>
@@ -72,7 +72,7 @@ const Programme = () => {
                 </div>
             </div>
 
-            <div className="sessions">
+            <div className="sessions s3">
                 <div>
                     <h3> Programs Guided by Australian Curriculum </h3>
                     <p>
@@ -94,10 +94,68 @@ const Programme = () => {
                 <div className='timeHead'>
                     <p> Primary Student - Year 6 </p>
                 </div>
-                <div className="timeFlexbox">
-                    <div className="sessionBox-contain">
-                        <div id='sessContainer2'>
-                            <div className="sessionBox">
+
+                <div className="sessionBox-contain">
+                    <div className="session-tableContainer">
+                        <div className="session-table">
+                            <table>
+                                <tr>
+                                    <td className='col1'>
+                                        <p> 03:30PM <br /> | <br /> 05:00PM  </p>
+                                    </td>
+                                    <td className='col2'>
+                                        <div>
+                                            <p> Maths & English </p>
+                                        </div>
+                                    </td>
+
+                                    <td className='col3'>
+                                        <div>
+                                            <p> Session 1 </p>
+                                            <p> 45 min each </p>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td className='col1'>
+                                        <p> 05:00PM <br /> | <br /> 06:30PM  </p>
+                                    </td>
+                                    <td className='col2'>
+                                        <div>
+                                            <p> Maths & English </p>
+                                        </div>
+                                    </td>
+
+                                    <td className='col3'>
+                                        <div>
+                                            <p> Session 2 </p>
+                                            <p> 45 min each</p>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td className='col1'>
+                                        <p> 06:30PM <br /> | <br /> 07:00PM  </p>
+                                    </td>
+                                    <td className='col2'>
+                                        <div>
+                                            <p> Maths or English (only one) </p>
+                                        </div>
+                                    </td>
+
+                                    <td className='col3'>
+                                        <div>
+                                            <p> Session 3 </p>
+                                            <p> 1 hour </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div className="session-img">
+                            <div className="sessionBox box1">
                                 <p> <AiOutlineBarChart
                                     size={60}
                                 /> </p>
@@ -105,64 +163,275 @@ const Programme = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="sessionTable">
-                        <table>
-                            <tr>
-                                <td className='col1'>
-                                    <p> 03:30PM <br /> | <br /> 05:00PM  </p>
-                                </td>
-                                <td className='col2'>
-                                    <div>
-                                        <p> Maths and English </p>
-                                    </div>
-                                </td>
+                </div>
 
-                                <td className='col3'>
-                                    <div>
-                                        <p> Session 1 </p>
-                                        <p> 45 min </p>
-                                    </div>
-                                </td>
-                            </tr>
+                <div className="sessionBox-contain">
+                    <div className="session-tableContainer">
+                        <div className="session-table">
+                            <table>
+                                <tr>
+                                    <td className='col1'>
+                                        <p> 08:00AM <br /> | <br /> 09:00AM  </p>
+                                    </td>
+                                    <td className='col2'>
+                                        <div>
+                                            <p> Maths & English </p>
+                                        </div>
+                                    </td>
 
-                            <tr>
-                                <td className='col1'>
-                                    <p> 03:30PM <br /> | <br /> 05:00PM  </p>
-                                </td>
-                                <td className='col2'>
-                                    <div>
-                                        <p> Maths and English </p>
-                                    </div>
-                                </td>
+                                    <td className='col3'>
+                                        <div>
+                                            <p> Session 1 </p>
+                                            <p> 45 min each</p>
+                                        </div>
+                                    </td>
+                                </tr>
 
-                                <td className='col3'>
-                                    <div>
-                                        <p> Session 1 </p>
-                                        <p> 45 min </p>
-                                    </div>
-                                </td>
-                            </tr>
+                                <tr>
+                                    <td className='col1'>
+                                        <p> 09:30AM <br /> | <br /> 11:00AM  </p>
+                                    </td>
+                                    <td className='col2'>
+                                        <div>
+                                            <p> Maths & English </p>
+                                        </div>
+                                    </td>
 
-                            <tr>
-                                <td className='col1'>
-                                    <p> 03:30PM <br /> | <br /> 05:00PM  </p>
-                                </td>
-                                <td className='col2'>
-                                    <div>
-                                        <p> Maths and English </p>
-                                    </div>
-                                </td>
+                                    <td className='col3'>
+                                        <div>
+                                            <p> Session 2 </p>
+                                            <p> 45 min each</p>
+                                        </div>
+                                    </td>
+                                </tr>
 
-                                <td className='col3'>
-                                    <div>
-                                        <p> Session 1 </p>
-                                        <p> 45 min </p>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
+                                <tr>
+                                    <td className='col1'>
+                                        <p> 11:00AM <br /> | <br /> 12:30PM  </p>
+                                    </td>
+                                    <td className='col2'>
+                                        <div>
+                                            <p> Maths & English </p>
+                                        </div>
+                                    </td>
+
+                                    <td className='col3'>
+                                        <div>
+                                            <p> Session 3 </p>
+                                            <p> 45 min each</p>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td colSpan='3' className='break'>
+                                        <p>  1 Hour Break <br /> | <br /> 12:30PM - 01:30PM  </p>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td className='col1'>
+                                        <p> 01:30PM <br /> | <br /> 03:00PM  </p>
+                                    </td>
+                                    <td className='col2'>
+                                        <div>
+                                            <p> Maths & English </p>
+                                        </div>
+                                    </td>
+
+                                    <td className='col3'>
+                                        <div>
+                                            <p> Session 4 </p>
+                                            <p> 45 min each</p>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td className='col1'>
+                                        <p> 03:00PM <br /> | <br /> 04:30PM  </p>
+                                    </td>
+                                    <td className='col2'>
+                                        <div>
+                                            <p> Maths & English </p>
+                                        </div>
+                                    </td>
+
+                                    <td className='col3'>
+                                        <div>
+                                            <p> Session 5 </p>
+                                            <p> 45 min each</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div className="session-img">
+                            <div className="sessionBox box2">
+                                <p> <AiOutlineBarChart
+                                    size={60}
+                                /> </p>
+                                <p> Saturday - Sunday </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+            </div>
+
+            <div className="timings-wrapper1 w2">
+                <div className='timeHead'>
+                    <p> Year 7 - Year 12 </p>
+                </div>
+
+                <div className="sessionBox-contain">
+                    <div className="session-tableContainer">
+                        <div className="session-table">
+                            <table>
+                                <tr>
+                                    <td className='col1'>
+                                        <p> 03:30PM <br /> | <br /> 05:30PM  </p>
+                                    </td>
+                                    <td className='col2'>
+                                        <div>
+                                            <p> Maths, English or Science </p>
+                                        </div>
+                                    </td>
+
+                                    <td className='col3'>
+                                        <div>
+                                            <p> Session 1 </p>
+                                            <p> 1 hour each </p>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td className='col1'>
+                                        <p> 05:30PM <br /> | <br /> 07:30PM  </p>
+                                    </td>
+                                    <td className='col2'>
+                                        <div>
+                                            <p> Maths, English or Science </p>
+                                        </div>
+                                    </td>
+
+                                    <td className='col3'>
+                                        <div>
+                                            <p> Session 2 </p>
+                                            <p> 1 hour each</p>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </div>
+                        <div className="session-img">
+                            <div className="sessionBox box3">
+                                <p> <AiOutlineBarChart
+                                    size={60}
+                                /> </p>
+                                <p> Monday - Friday </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="sessionBox-contain">
+                    <div className="session-tableContainer">
+                        <div className="session-table">
+                            <table>
+                                <tr>
+                                    <td className='col1'>
+                                        <p> 08:30AM <br /> | <br /> 10:30AM  </p>
+                                    </td>
+                                    <td className='col2'>
+                                        <div>
+                                            <p> Maths, English or Science </p>
+                                        </div>
+                                    </td>
+
+                                    <td className='col3'>
+                                        <div>
+                                            <p> Session 1 </p>
+                                            <p> 1 hour each</p>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td className='col1'>
+                                        <p> 10:30AM <br /> | <br /> 12:30PM  </p>
+                                    </td>
+                                    <td className='col2'>
+                                        <div>
+                                            <p> Maths, English or Science </p>
+                                        </div>
+                                    </td>
+
+                                    <td className='col3'>
+                                        <div>
+                                            <p> Session 2 </p>
+                                            <p> 1 hour each</p>
+                                        </div>
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+                                    <td colSpan='3' className='break'>
+                                        <p>  1 Hour Break <br /> | <br /> 12:30PM - 01:30PM  </p>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td className='col1'>
+                                        <p> 01:30PM <br /> | <br /> 03:30PM  </p>
+                                    </td>
+                                    <td className='col2'>
+                                        <div>
+                                            <p> Maths, English or Science </p>
+                                        </div>
+                                    </td>
+
+                                    <td className='col3'>
+                                        <div>
+                                            <p> Session 3 </p>
+                                            <p> 1 hour each</p>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td className='col1'>
+                                        <p> 03:30PM <br /> | <br /> 04:30PM  </p>
+                                    </td>
+                                    <td className='col2'>
+                                        <div>
+                                            <p> Maths, English or Science (only one) </p>
+                                        </div>
+                                    </td>
+
+                                    <td className='col3'>
+                                        <div>
+                                            <p> Session 4 </p>
+                                            <p> 1 hour only</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div className="session-img">
+                            <div className="sessionBox box4">
+                                <p> <AiOutlineBarChart
+                                    size={60}
+                                /> </p>
+                                <p> Saturday - Sunday </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     );

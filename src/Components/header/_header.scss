@@ -15,12 +15,13 @@
         // width: 55%;
         // min-height: 91vh;
         // max-height: max-content;
+        z-index: -1;
 
         p {
             padding: 10px;
             // border: 1px solid black;
             line-height: 5rem;
-            position: relative;
+            // position: relative;
 
             // font-size:4rem ;
             font-family: 'Bungee', cursive;

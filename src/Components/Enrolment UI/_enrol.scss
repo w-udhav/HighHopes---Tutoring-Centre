@@ -1,4 +1,6 @@
 @import url('../header/_header.scss');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Montserrat&family=Staatliches&display=swap');
+
 
 .enrol-head-wrapper{
     margin: 0;
@@ -7,13 +9,18 @@
     
     width: 100%;
     box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+
+    .head-nav *{
+        color: black;
+    }
 
     & .enrol-head{
         box-sizing: border-box;
         height: 75vh;
         
         p{
-            border: 1px solid black;
+            // border: 1px solid black;
             padding: 10px;
             margin-top: 40px;
             
@@ -30,15 +37,64 @@
 
 .enrol-para{
     width: 100%;
-    border: 1px solid green;
+    // border: 1px solid red;
     box-sizing: border-box;
+    display: flex;
+    box-sizing: border-box;
+    min-height: 75vh;
+    margin: 40px 0;
+
+    & .enrol-imgSide {
+        // border: 1px solid;
+        flex: 0.47;
+        background-image: url('../../assets/pexels-karolina-grabowska-5478182.jpg');
+        background-size: cover;
+        background-position: bottom center;
+        margin: 25px;
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+
+        
+        p {
+            border: 1px solid black;
+            margin: 50px;
+            padding: 25px;
+            font-family: 'Staatliches',sans-serif;
+            font-size: 4rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            width: max-content;
+            // background-color: rgba(245, 222, 179, 0.379);
+            background-color: rgba(255, 255, 0, 0.278);
+        }
+    }
 
     & .para-context{
-
+        // border: 1px solid;
+        box-sizing: border-box;
+        flex: 0.53;
+        padding-top: 50px;
         p{
-            border: 1px solid;
-            text-align: center;
+            // border: 1px solid;
+            letter-spacing: 0.2px;
+            line-height: 28px;
+            font-size: 1.4rem;
+            font-family: 'Barlow', sans-serif;
+            border-radius: 4px;
+            box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+        }
+
+        p:nth-child(1) {
+            font-weight: 500;
+            font-size: 2rem;
+        }
+        p:nth-child(2){
+            background-color: rgba(242, 242, 242, 0.591);
+        }
+        p:nth-child(3){
             font-size: 1.5rem;
+            color: rgb(56, 133, 181);
+            background-color: rgba(56, 133, 181, 0.069);
         }
     }
 }
@@ -46,21 +102,45 @@
 .enrol-form-here{
     width: 100%;
     box-sizing: border-box;
-    border: 1px solid red;
+    // border: 0.2px solid grey;
+    padding: 10px;
+    margin: 0;
 
-    p{
-        text-align: center;
-        background-color: pink;
+    background-image: url('../../assets/elegant_watercolour_abstract_background_2409.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    // background-position: left;
+    // background-attachment: fixed;
 
-        margin: 0;
+    & #formHere {
+        // border: 1px solid;
+        padding: 20px 0 2px 0;
+
+        P {
+            // border: 1px solid;
+            border-radius: 3px;
+            background-color: #6FDFDF;
+            width: max-content;
+            padding: 15px 50px;
+
+            margin-left: 50%;
+            transform: translate(-50%);
+            // box-shadow: 0px 0px 10px 0.1px white;
+
+            font-size: 1.8rem;
+            font-family: 'Barlow', sans-serif;
+            
+        }
     }
 
     & .form-container{
-        // box-shadow: 3px 3px 20px 1px rgba(0, 0, 0, 0.447);
         // margin is used in media
-        padding: 20px;
+        padding: 18px;
         border-radius: 1px;
         box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        backdrop-filter: blur(5px);
+        background-color: rgba(255, 255, 255, 0.82);
     }
 }
 
@@ -72,11 +152,28 @@
 
 // Child Form : step 1
 
-.childinfo{
-    // border: 1px solid;
+.commanInfoStyle{
+    // border: 1px dashed;
+    font-family: 'Montserrat', sans-serif;
     padding: 4px;
+    line-height: 28px;
+
+    input {
+        font-family: 'Montserrat', sans-serif;
+    }
+    
 
 }
+.formSubtitle {
+    // border: 1px dashed grey;
+    
+    padding: 10px;
+    font-size: 1.5rem;
+    font-weight: 800;
+    // height: max;
+    background: #00bbff;
+}
+
 .child-wrapper{
     display: flex;
     justify-content: space-between;
@@ -114,6 +211,18 @@
 }
 
 
+// terms
+
+.terms {
+    padding: 0 25px;
+    margin-bottom: 40px;
+}
+
+.agreeBox {
+    padding-left: 50px;
+}
+
+
 
 
 
@@ -131,6 +240,25 @@
 
     .form-container{
         margin: 2rem 23%;
+    }
+    .enrol-para {
+        flex-direction: row;
+    }
+
+    .para-context {
+        p {
+            padding: 25px 50px;
+            margin: 50px 100px ;
+
+        }
+
+        p:nth-child(3){
+            margin: 70px 100px ;
+        }
+    }
+
+    .formSubtitle {
+        width: max-content;
     }
 }
 
@@ -153,5 +281,24 @@
     .child-wrapper{
         display: block;
     }
+    .child-n {
+        margin: 10px 0;
+    }
+
+    .enrol-para {
+        flex-direction: column;
+    }
     
+    .para-context {
+        p {
+            padding: 40px 50px;
+            margin: 35px 20px ;
+            line-height: 28px;
+
+        }
+
+        p:nth-child(3){
+            margin: 70px 20px;
+        }
+    }
 }

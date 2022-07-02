@@ -1,29 +1,115 @@
-.navbar{
-    border: 1px solid black;
-    margin: 0 10vw;
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=El+Messiri:wght@500&family=Montserrat&family=Staatliches&display=swap');
+
+.navbar {
+    // border: 1px solid black;
+    // margin: 0 10vw;
     height: 100%;
     padding: 0.4rem;
     box-sizing: border-box;
-    
-    
-    ul{
-        list-style-type: none;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: center;
+    font-family: 'El Messiri', sans-serif;
+    font-size: 1rem;
+    // border: 1px solid red;
+    background-color: rgba(0, 0, 0, 0.106);
+    z-index: 999;
 
-        li{
-            // float: left;
-            width: max-content;
-            border: 1px solid;
 
-            a{
-                text-decoration: none;
-                // display: block;
-                color: black;
-                padding: 10px;
+    button {
+        color: black;
+    }
+
+    & .nav-wrapp {
+        // border: 1px solid green;
+        width: 65%;
+        margin-left: 50%;
+        transform: translate(-50%);
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0;
+            // border: 1px solid black;
+
+            li {
+                // float: left;
+                width: 100px;
+                text-align: center;
+                border: 1px solid;
+                padding: 5px;
+                border-radius: 2px;
+                background-color: rgba(128, 128, 128, 0.249);
+
+                a {
+                    text-decoration: none;
+                    // color: white;
+
+                }
             }
+        }
+    }
+}
+
+.hamburger {
+    border: 1px solid wheat;
+    margin-left: 50%;
+    transform: translate(-50%);
+    width: 40%;
+    display: none;
+    position: absolute;
+    background-color: black;
+
+    & #hamMenu {
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+        padding: 5px;
+
+        li {
+            box-sizing: border-box;
+            border: 1px solid black;
+            width: 100%;
+            padding: 10px;
+
+            a {
+                text-decoration: none;
+                // color: ;
+            }
+        }
+    }
+}
+
+.showMenu {
+    display: block;
+}
+
+@media (min-width: 570px) {
+    .navbar {
+        & #menu {
+            flex-direction: row;
+        }
+    }
+
+    .hamburger,
+    .hamburgerBtn {
+        display: none;
+    }
+}
+
+
+@media (max-width: 570px) {
+    .navbar {
+        & #menu {
+            display: none;
+        }
+    }
+
+    .hamburger {
+        // display: inline-block;
+
+        ul {
+            flex-direction: column;
         }
     }
 }

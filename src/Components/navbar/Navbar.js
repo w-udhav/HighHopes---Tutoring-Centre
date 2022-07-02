@@ -1,29 +1,68 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './_navbar.scss'
+import { CgDetailsMore } from 'react-icons/cg'
+import { ImCross } from 'react-icons/im'
+import { Button } from '@mui/material';
 
 const Navbar = () => {
+    const [navbarOpen, setNavbarOpen] = useState(false);
+
+    const handleToggle = () => {
+        setNavbarOpen(!navbarOpen);
+    }
     return (
         <nav className="navbar">
-            <ul>
-                <li>
-                    <Link to='/'> Home </Link>
-                </li>
-                <li>
-                    <Link to='/enrol'> Enrol </Link>
-                </li>
-                <li>
-                    <Link to='/programme'> Programme </Link>
-                </li>
-                <li>
-                    <Link to='/about'> About </Link>
-                </li>
-                <li>
-                    <Link to='#'> Contact </Link>
-                </li>
-            </ul>
+            <div className="hamburgerBtn">
+                <Button
+                    onClick={handleToggle}
+                >
+                    {navbarOpen ? <ImCross size={30} /> : <CgDetailsMore size={30} />}
+                </Button>
+            </div>
+            <div className={`hamburger ${navbarOpen ? "showMenu" : ""}`}>
+                <ul id='hamMenu'>
+                    <li>
+                        <Link to='/'> Home </Link>
+                    </li>
+                    <li>
+                        <Link to='/enrol'> Enrol </Link>
+                    </li>
+                    <li>
+                        <Link to='/programme'> Programme </Link>
+                    </li>
+                    <li>
+                        <Link to='/about'> About </Link>
+                    </li>
+                    <li>
+                        <Link to='#'> Contact </Link>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div className="nav-wrapp">
+                <ul id='menu'>
+                    <li>
+                        <Link to='/'> Home </Link>
+                    </li>
+                    <li>
+                        <Link to='/enrol'> Enrol </Link>
+                    </li>
+                    <li>
+                        <Link to='/programme'> Programme </Link>
+                    </li>
+                    <li>
+                        <Link to='/about'> About </Link>
+                    </li>
+                    <li>
+                        <Link to='#'> Contact </Link>
+                    </li>
+                </ul>
+            </div>
 
         </nav>
     );
 }
- 
+
 export default Navbar;
