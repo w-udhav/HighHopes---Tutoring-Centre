@@ -9,6 +9,12 @@ const Header = () => {
             </div>
             <div className="head-title">
                 <p> HIGH HOPES <br /> <span>TUTORING <br /> CENTRE </span></p>
+                {/* <p> Learners Today <br /> Leaders Tomorrow </p> */}
+
+            </div>
+            <div className="head-line">
+                <p> Learners Today </p>
+                <p>Leaders Tomorrow </p>
             </div>
         </div>
     );

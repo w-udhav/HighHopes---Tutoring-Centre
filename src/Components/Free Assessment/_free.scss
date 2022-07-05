@@ -1,42 +1,45 @@
-.assessment-wrapper{
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Montserrat&family=Staatliches&display=swap');
+
+
+.assessment-wrapper {
     width: 100%;
     box-sizing: border-box;
     padding: 2rem;
     overflow: hidden;
 
-    & .assessment-container{
+    & .assessment-container {
         width: 100%;
         // height: 100px;
-        background: linear-gradient(135deg, #35405C 40%,#2F3B52  40% 60%, #222d43 60% 100%);
+        background: linear-gradient(135deg, #35405C 40%, #2F3B52 40% 60%, #222d43 60% 100%);
         box-shadow: 4px 4px 5px 1px #06283D;
 
         display: flex;
         flex-wrap: wrap;
 
-        & .assessment-title{
+        & .assessment-title {
             // border: 1px solid white;
 
             // color: transparent;
             color: white;
             font-weight: bold;
             // background:linear-gradient(to right, grey, white);
-            text-shadow:2px 6px 2px black;
+            text-shadow: 2px 6px 2px black;
             // background-clip: text;
             font-size: 1.9rem;
             font-family: Arial, Helvetica, sans-serif;
             letter-spacing: 1.5px;
             text-align: center;
-            
+
             padding: 10px;
 
         }
 
-        & .assessment-button{
+        & .assessment-button {
             // border: 1px solid white;
-        
+
             text-align: center;
-            
-            & #btn{
+
+            & #btn {
                 font-size: 17px;
                 height: 100%;
             }
@@ -44,33 +47,78 @@
     }
 }
 
+.formContainer {
+    margin: 0;
+    padding: 0;
+
+    & .form-wrapper {
+        margin: 0;
+        width: 40%;
+        margin-left: 50%;
+        transform: translate(-50%);
+
+        p:nth-child(1) {
+            font-size: 2rem;
+            font-weight: bold;
+            font-family: sans-serif;
+            text-align: center;
+            border: 1px solid;
+            padding: 20px;
+            background-color: #2ec2d9e2;
+            border-radius: 5px;
+        }
+
+        form {
+            // border: 1px solid;
+            border-radius: 5px;
+
+            & div {
+                padding: 8px 0;
+
+                input {
+                    background-color: white;
+                    letter-spacing: 1px;
+                    font-family: 'Barlow', sans-serif;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
 // #06283D
 
-@media (min-width:570px){
-    .assessment-title{
+@media (min-width:570px) {
+    .assessment-title {
         flex: 0.6;
         margin: 40px;
 
     }
-    .assessment-button{
+
+    .assessment-button {
         flex: 0.4;
         margin: 40px;
     }
 }
 
-@media (max-width:570px){
-    .assessment-title{
+@media (max-width:570px) {
+    .assessment-title {
         flex: 1;
         margin: 40px 40px 10px;
     }
-    .assessment-button{
+
+    .assessment-button {
         flex: 1;
         height: 60px;
-        
+
         margin: 10px 40px 40px;
-        
-        
-        & #btn{
+
+
+        & #btn {
             width: 200px;
         }
     }

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './_navbar.scss'
 import { CgDetailsMore } from 'react-icons/cg'
-import { ImCross } from 'react-icons/im'
+import { TbArrowsCross } from 'react-icons/tb'
 import { Button } from '@mui/material';
 
 const Navbar = () => {
@@ -13,12 +13,15 @@ const Navbar = () => {
     }
     return (
         <nav className="navbar">
-            <div className="hamburgerBtn">
-                <Button
-                    onClick={handleToggle}
-                >
-                    {navbarOpen ? <ImCross size={30} /> : <CgDetailsMore size={30} />}
-                </Button>
+            <div className="hamburgerBtnContain">
+                <div>
+                    <Button
+                        onClick={handleToggle}
+                        className='hamburgerBtn'
+                    >
+                        {navbarOpen ? <TbArrowsCross size={30} /> : <CgDetailsMore size={30} />}
+                    </Button>
+                </div>
             </div>
             <div className={`hamburger ${navbarOpen ? "showMenu" : ""}`}>
                 <ul id='hamMenu'>
@@ -35,7 +38,7 @@ const Navbar = () => {
                         <Link to='/about'> About </Link>
                     </li>
                     <li>
-                        <Link to='#'> Contact </Link>
+                        <Link to='contact'> Contact </Link>
                     </li>
                 </ul>
             </div>

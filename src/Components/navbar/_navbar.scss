@@ -8,6 +8,7 @@
     box-sizing: border-box;
     font-family: 'El Messiri', sans-serif;
     font-size: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
     // border: 1px solid red;
     background-color: rgba(0, 0, 0, 0.106);
     z-index: 999;
@@ -34,7 +35,7 @@
 
             li {
                 // float: left;
-                width: 100px;
+                width: 120px;
                 text-align: center;
                 border: 1px solid;
                 padding: 5px;
@@ -44,6 +45,7 @@
                 a {
                     text-decoration: none;
                     // color: white;
+                    font-size: 1.2rem;
 
                 }
             }
@@ -52,30 +54,56 @@
 }
 
 .hamburger {
-    border: 1px solid wheat;
+    // border: 1px solid wheat;
     margin-left: 50%;
     transform: translate(-50%);
     width: 40%;
     display: none;
     position: absolute;
-    background-color: black;
+    background-color: transparent;
 
     & #hamMenu {
         list-style-type: none;
-        padding: 0;
+        padding: 0; 
         text-align: center;
         padding: 5px;
 
+
         li {
             box-sizing: border-box;
-            border: 1px solid black;
+            // border-bottom: 0.2px solid;
             width: 100%;
-            padding: 10px;
+            padding: 4px 10px;
+            background-color: #ABC9FF;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
             a {
+                display: block;
+                box-sizing: border-box;
                 text-decoration: none;
-                // color: ;
+                font-size: 1.2rem;
+                width: 100%;
+                // background-color: white;
+                padding: 4px;
+                color: #EB4747;
             }
+        }
+
+    }
+}
+
+.hamburgerBtnContain {
+    // border: 1px solid black;
+
+    div {
+        // position: relative;
+        // border: 1px solid;
+        width: max-content;
+        margin-left: 50%;
+        transform: translate(-50%);
+
+        & .hamburgerBtn {
+            background-color: rgba(0, 0, 0, 0.236);
         }
     }
 }
@@ -92,7 +120,7 @@
     }
 
     .hamburger,
-    .hamburgerBtn {
+    .hamburgerBtnContain {
         display: none;
     }
 }

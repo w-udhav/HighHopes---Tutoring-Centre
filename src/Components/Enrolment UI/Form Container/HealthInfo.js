@@ -38,7 +38,7 @@ export class HealthInfo extends Component {
     }
 
     render() {
-        const { values, handleChange } = this.props;
+        const { values, handleChange, handleSelect } = this.props;
         const { values: { foodAllergy, medication } } = this.props
         const { prob1, prob2, prob3, prob4, formErrors } = this.state;
 
@@ -47,6 +47,8 @@ export class HealthInfo extends Component {
             let formErrors = {};
 
             if (formIsValid) {
+                handleChange('foodAllergy')
+
                 if (!prob1) {
                     formIsValid = false;
                     formErrors.H1 = false;
@@ -78,8 +80,15 @@ export class HealthInfo extends Component {
             }
 
             this.setState({ formErrors: formErrors, formIsValid: formIsValid });
+            // this.props.handleSelect('foodAllergy', prob1);
 
-            if(!formIsValid){
+            console.log(this.state)
+            if (formIsValid) {
+                handleSelect('foodAllergy', prob1);
+                handleSelect('medication', prob2);
+                handleSelect('medAllergy', prob3);
+                handleSelect('healthProb', prob4);
+
                 this.props.nextStep();
             }
         }
@@ -87,17 +96,18 @@ export class HealthInfo extends Component {
 
         return (
             <div className='commanInfoStyle'>
-                <p className='formSubtitle'> Child's Health and Medical Conditions </p>
+                <p className='formSubtitle'> Student's Health and Medical Conditions </p>
                 <div className="condition-wrapper">
                     <FormControl fullWidth>
                         <InputLabel id='alergy-food'> Is your child allergic to any food? </InputLabel>
                         <Select
                             labelId='alergy-food'
                             id='1'
-                            label='Is your child alergic to any food?'
-                            defaultValue={prob1}
+                            label='Is your child allergic to any food?'
+                            value={prob1}
                             onChange={(e) => {
                                 this.setState({ prob1: e.target.value });
+
                             }}
                             error={!formErrors.H1}
 
@@ -134,7 +144,7 @@ export class HealthInfo extends Component {
                         <InputLabel id='alergy-medication'>Does your child allergic to any medications?  </InputLabel>
                         <Select
                             labelId='alergy-medication'
-                            label='Does your child alergic to any medications?'
+                            label='Does your child allergic to any medications?'
                             defaultValue={prob3}
                             onChange={(e) => this.setState({ prob3: e.target.value })}
                             error={!formErrors.H3}
@@ -150,7 +160,7 @@ export class HealthInfo extends Component {
                         <Select
                             label='Does your child suffer from any health problem?'
                             defaultValue={prob4}
-                            onChange={(e) => this.setState({ prob2: e.target.value })}
+                            onChange={(e) => this.setState({ prob4: e.target.value })}
                             error={!formErrors.H4}
                         >
                             <MenuItem value='yes' > Yes </MenuItem>

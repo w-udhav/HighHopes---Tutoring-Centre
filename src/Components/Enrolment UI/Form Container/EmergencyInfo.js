@@ -76,23 +76,23 @@ export class EmergencyInfo extends Component {
 
 
                 // MOBIL 2
-                if (authCont2 == "") {
-                    // formIsValid = false;
-                    formErrors.ANo2 = true;
-                } else {
-                    var mobPattern = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/;
-                    if (!mobPattern.test(authCont2)) {
-                        formIsValid = false;
-                        formErrors.ANo2 = false;
-                    } else {
-                        formErrors.ANo2 = true;
-                    }
-                }
+                // if (authCont2 == "") {
+                //     // formIsValid = false;
+                //     formErrors.ANo2 = true;
+                // } else {
+                //     var mobPattern = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/;
+                //     if (!mobPattern.test(authCont2)) {
+                //         formIsValid = false;
+                //         formErrors.ANo2 = false;
+                //     } else {
+                //         formErrors.ANo2 = true;
+                //     }
+                // }
 
             }
 
             this.setState({ formErrors: formErrors, formIsValid: formIsValid })
-            if (!formIsValid) {
+            if (formIsValid) {
                 this.props.nextStep()
             }
             return formIsValid;
@@ -157,6 +157,7 @@ export class EmergencyInfo extends Component {
                     <div className="child-n">
                         <TextField
                             label='Contact Number'
+                            type='number'
                             fullWidth
                             defaultValue={values.authCont2}
                             onChange={handleChange('authCont2')}

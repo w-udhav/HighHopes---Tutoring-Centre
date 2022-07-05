@@ -30,7 +30,7 @@ export class ChildInfo extends Component {
 
 
     render() {
-        const { values: { firstName, gender, schoolName, year, homeAdd, subUrb, postCode, studentEmail },
+        const { values: { firstName, dob, gender, schoolName, year, homeAdd, subUrb, postCode, studentEmail },
                 handleChange, values } = this.props;
 
         const { formErrors, formIsValid } = this.state;
@@ -123,7 +123,7 @@ export class ChildInfo extends Component {
             }
 
             this.setState({ formErrors: formErrors, formIsValid: formIsValid })
-            if (!formIsValid) {
+            if (formIsValid) {
                 this.props.nextStep()
             }
             return formIsValid;
@@ -136,7 +136,7 @@ export class ChildInfo extends Component {
 
         return (
             <div className='commanInfoStyle'>
-                <p className='formSubtitle'> Child's Informations </p>
+                <p className='formSubtitle'> Student Details </p>
 
                 {/* Row 1 */}
                 <div className="child-wrapper">
@@ -170,7 +170,7 @@ export class ChildInfo extends Component {
                             id="date"
                             label="Date Of Birth"
                             type="date"
-                            defaultValue={date}
+                            defaultValue={values.dob}
                             InputLabelProps={{
                                 shrink: true,
                             }}

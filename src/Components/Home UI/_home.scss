@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Montserrat&family=Staatliches&display=swap');
 
 .home {
 
@@ -42,42 +42,88 @@
         }
     }
 
-    & .box-container{
+    & .box-container {
         display: flex;
         text-align: center;
         align-items: center;
-        margin: 80px 0;
+        // margin: 100px 0;
+        padding: 100px 50px;
         box-sizing: border-box;
+        background-image: url('../../assets/empty-elegant-background-with-copy-space.jpg');
 
-
-        & .box1-Q{
+        & .box1-Q {
             // border: 1px solid;
             width: 100%;
 
+            & .inBox1 {
+                padding: 40px 0;
+            }
         }
 
-        & .box2-F{
+        & .box2-F {
             // border: 1px solid;
             width: 100%;
+
+            & .inBox2 {
+                padding: 40px 0;
+            }
         }
 
     }
 
-    & .filler-wrapper{
-        background-color: grey;
+    & .filler-wrapper {
+        // border: 1px dashed;
+        min-height: 70vh;
+        box-shadow:
+            inset 0px 14px 13px -10px rgba(214, 214, 214, 0.72),
+            inset 0px -14px 13px -10px rgba(0, 0, 0, 0.72);
+        margin: 0;
+        padding: 20px 0;
+        background-image: url('../../assets/pexels-rodion-kutsaiev-7911758.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #DCDDDF;
+        // background-color: linear-gradient(to bottom,#D5D6D8, #E4E5E7, #DCDDDF);
+
+        // img {
+        //     margin: 0;
+        //     padding: 0;
+        //     width: 250px;
+        //     border-radius: 10px;
+        // }
+        p {
+            // border: 1px solid;
+            text-align: center;
+            padding: 25px;
+            font-size: 2rem;
+            line-height: 40px;
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+            color: rgb(70, 70, 70);
+        }
+
+        & .filler1 {
+            // border: 1px solid;
+            padding: 0;
+            margin: 0;
+            margin-top: 120px;
+            p {
+                background-color:  #17a3b870;
+                color: black;
+                letter-spacing: 0.7px;
+                width: max-content;
+                font-size: 2.5rem;
+                font-family: 'Staatliches', cursive;
+                margin-left: 50%;
+                transform: translate(-50%);
+            }
+        }
+        
+    }
+
+    & .freeForm {
         margin: 0;
 
-        img{
-            margin: 0;
-            padding: 0;
-            width: 250px;
-            border-radius: 10px;
-        }
-    }
-
-    & .freeForm{
-        background: black;
-        
     }
 }
 
@@ -85,12 +131,13 @@
 
 
 
-#span1{
+#span1 {
     // background-color: crimson;
     color: green;
     padding: 4px;
 }
-#span2{
+
+#span2 {
     color: crimson;
 }
 
@@ -107,23 +154,22 @@
 
 
 @media (min-width:450px) {
-    .intro-context p{
+    .intro-context p {
         font-size: 3.1rem;
         line-height: 4.1rem;
     }
 }
 
-@media (min-width:600px){
-    .box-container{
-        
-    }
+@media (min-width:600px) {
+    .box-container {}
 
-    .inBox1{
+    .inBox1 {
         margin-left: 60%;
         width: max-content;
         transform: translate(-60%);
     }
-    .inBox2{
+
+    .inBox2 {
         margin-left: 40%;
         width: max-content;
         transform: translate(-40%);
@@ -135,23 +181,24 @@
 
 
 @media (max-width:450px) {
-    .intro-context p{
+    .intro-context p {
         font-size: 2rem;
         line-height: 2.5rem;
     }
 }
 
-@media (max-width:600px){
-    .box-container{
+@media (max-width:600px) {
+    .box-container {
         flex-direction: column;
     }
 
-    .inBox1{
+    .inBox1 {
         margin-left: 50%;
         width: max-content;
         transform: translate(-50%);
     }
-    .inBox2{
+
+    .inBox2 {
         margin-left: 50%;
         width: max-content;
         transform: translate(-50%);

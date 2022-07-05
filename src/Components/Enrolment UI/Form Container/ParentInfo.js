@@ -103,7 +103,7 @@ export class ParentInfo extends Component {
                 
 
                 // MOBIL 2
-                if(parentCont2 == ""){
+                if(parentCont2 !== ""){
                     // formIsValid = false;
                     formErrors.PNo2 = true;
                 } else {
@@ -119,7 +119,7 @@ export class ParentInfo extends Component {
             }
 
             this.setState({ formErrors: formErrors, formIsValid: formIsValid })
-            if (!formIsValid) {
+            if (formIsValid) {
                 this.props.nextStep()
             }
             return formIsValid;
@@ -127,7 +127,7 @@ export class ParentInfo extends Component {
 
         return (
             <div className='parentInfo commanInfoStyle'>
-                <p className='formSubtitle'> Parents/Guardian's Information </p>
+                <p className='formSubtitle'> Parents/Guardian's Details </p>
 
                 {/* Row 1 */}
                 <h4> Detail 1 </h4>

@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Montserrat&family=Staatliches&display=swap');
+
+
 .box-wrapper {
     // border: 1px solid;
     border-radius: 20px;
-    width: 270px;
+    width: 300px;
     box-sizing: border-box;
     position: relative;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -13,7 +16,7 @@
     border-radius: 20px 20px 0 0;
     background: url('../../assets/jr-korpa-9XngoIpxcEo-unsplash.jpg');
     background-size: cover;
-    height: 90px;
+    height: 120px;
 
 }
 
@@ -56,7 +59,7 @@
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-weight: bold;
         font-size: 1.2rem;
-
+        letter-spacing: 0.2px;
         color: rgb(55, 55, 55);
 
     }
@@ -64,11 +67,18 @@
 
 .boxDiv4 {
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif, sans-serif;
     margin: 40px 0 0 0;
 
+    a {
+        text-decoration: none;
+        font-size: 1.02rem;
+        color: rgb(73, 73, 73);
+        display: block;
+    }
+
     & button {
-        padding: 10px;
+        padding: 15px;
 
         border: none;
         outline: none;
@@ -86,6 +96,6 @@
         padding: 20px 27px 30px;
         text-align: justify;
         font-size: 1.1rem;
-        
+        line-height: 23px;
     }
 }

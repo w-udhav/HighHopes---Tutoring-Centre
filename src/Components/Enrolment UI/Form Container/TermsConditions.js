@@ -50,9 +50,9 @@ export class TermsConditions extends Component {
 
             this.setState({formErrors:formErrors, formIsValid: formIsValid});
 
-            // if(formIsValid){
-            //     this.props.nextStep();
-            // }
+            if(formIsValid){
+                this.props.nextStep();
+            }
 
             return formIsValid;
         }

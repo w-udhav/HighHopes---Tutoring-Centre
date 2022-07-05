@@ -6,31 +6,29 @@
     background: url('../../assets/david-van-dijk-3LTht2nxd34-unsplash.jpg');
     background-size: cover;
     background-position: center;
+    border: 1px solid;
+    display: block;
     // background-attachment: fixed;
     width: 100%;
     box-sizing: border-box;
+    -webkit-box-shadow: inset 0px -7px 14px -3px rgba(0, 0, 0, 0.72);
+    -moz-box-shadow: inset 0px -7px 14px -3px rgba(0, 0, 0, 0.72);
+    box-shadow: inset 0px -7px 14px -3px rgba(0, 0, 0, 0.72);
 
     & .head-title {
-        border: 1px solid black;
+        // border: 1px solid black;
         // width: 55%;
-        // min-height: 91vh;
+        min-height: 65vh;
         // max-height: max-content;
         z-index: -1;
 
-        p {
+        p:nth-child(1) {
             padding: 10px;
             // border: 1px solid black;
             line-height: 5rem;
-            // position: relative;
-
             // font-size:4rem ;
             font-family: 'Bungee', cursive;
-
-            // background-color: #666666;
-            // background-clip: text;
-            // color: transparent;
-            // text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
-
+            // margin: ;
             color: #f5f5f5;
             text-shadow: 1px 1px 1px #919191,
                 1px 2px 1px #919191,
@@ -46,7 +44,23 @@
                 1px 22px 10px rgba(16, 16, 16, 0.2),
                 1px 25px 35px rgba(16, 16, 16, 0.2),
                 1px 30px 60px rgba(16, 16, 16, 0.4);
-        
+
+        }
+    }
+
+    & .head-line {
+        // border: 1px solid;
+        box-sizing: border-box;
+        display: block;
+        position: relative;
+
+        p {
+            // margin: -20px 0;
+            // line-height: 20px;
+            // border: 1px dashed;
+            font-family: 'Barlow', sans-serif;
+            font-size: 1.5rem;
+            padding-left: 10px;
         }
     }
 }
@@ -54,11 +68,19 @@
 .head-nav {
     // border: 1px solid red;
     height: max-content;
+
+    a {
+        color: black;
+    }
 }
 
 @media (min-width:570px) {
+    .header {
+        height: 98vh;
+    }
+
     .head-title {
-        height: 91vh;
+        // height: 80vh;
 
         p {
             font-size: 4rem;
@@ -72,6 +94,8 @@
 
 
 @media (max-width:570px) {
+
+
     .head-title {
         height: 70vh;
 
