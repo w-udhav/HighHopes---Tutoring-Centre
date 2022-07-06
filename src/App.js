@@ -6,6 +6,7 @@ import EnrolForm from './Components/Enrolment UI/EnrolForm';
 import Programme from './Components/Programme UI/Programme';
 import About from './Components/About UI/About';
 import ScrollToTop from './ScrollToTop';
+import Contact from './Components/Contact UI/Contact';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
           <Route path='/enrol' element={<EnrolForm />} />
           <Route path='/programme' element={<Programme />} />
           <Route path='/about' element={<About />} />
-          <Route path='/contact' element={<Programme />} />
+          <Route path='/contact' element={<Contact />} />
         </Routes>
       </ScrollToTop>
     </div>

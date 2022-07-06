@@ -53,7 +53,7 @@ const About = () => {
                 <p className="facultyBanner formSubtitle"> Faculty Members </p>
                 <div className="facWrapper">
                     <div className="facMembers">
-                        <div className="imgContainer"> img here</div>
+                        <div className="imgContainer"> <img src={require('../../assets/dp.jpeg')} /> </div>
                         <div className="facInfo">
                             <p> Mrs. Mukta Sodhi </p>
                             <p> Founder of High Hopes Tutoring Centre </p>

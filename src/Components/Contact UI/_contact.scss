@@ -1,0 +1,28 @@
+@import url('../header/_header.scss');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Montserrat&family=Staatliches&display=swap');
+
+.contactContainer {
+
+    & .contact-head-wrapper {
+        // background-image: url('../../assets/');
+        width: 100%;
+        box-sizing: border-box;
+
+        .head-nav *{
+
+        }
+
+        & .contact-head {
+            box-sizing: border-box;
+            height: 75vh;
+
+            p {
+                padding: 10px;
+                margin-top: 40px;
+                font-weight: bold;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+            }
+        }
+    }
+}
