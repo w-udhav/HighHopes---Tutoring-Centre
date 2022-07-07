@@ -1,13 +1,11 @@
 import { Button } from '@mui/material';
 import React, { Component } from 'react'
 import '../_enrol.scss'
-// import firebase from '../../../Firebase'
 import './_confirm.scss'
 import { db } from '../../../Firebase'
 import { collection, addDoc, doc } from 'firebase/firestore'
-import { getDatabase, set, ref } from 'firebase/database'
 import { Link } from 'react-router-dom';
-// import * as firebase from 'firebase/app';
+import { ReactToPrint } from 'react-to-print'
 
 
 export class ConfirmInfo extends Component {
@@ -36,10 +34,18 @@ export class ConfirmInfo extends Component {
             sign } } = this.props;
 
         // const ref = firebase.firestore().collection("studentForm")
-        console.log(firstName);
         const { loading, mailStatus, buttonVis } = this.state;
 
-        
+        const submitEmail = async (data) => {
+            console.log(data)
+            await fetch("https://apnacompany.herokuapp.com/sendform", {
+                method: "POST",
+                body: JSON.stringify(data),
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            })
+        };
 
         const handleSubmit = async (e) => {
             e.preventDefault();
@@ -77,6 +83,16 @@ export class ConfirmInfo extends Component {
                     Signaturee: sign
                 })
                 console.log("Data sent!")
+                let data = {
+                    firstName, lastName, dob, gender, schoolName, year, homeAdd, subUrb, postCode, studentEmail,
+                    parentName1, relation1, parentEmail1, parentCont1, parentName2, relation2, parentEmail2, parentCont2,
+                    authPerson1, authCont1, authRelation1, authPerson2, authCont2, authRelation2,
+                    foodAllergy, medication, medAllergy, healthProb,
+                    sign
+                }
+                submitEmail(data);
+                console.log('mail sent!')
+
             } catch (err) {
                 console.log(err);
             }
@@ -86,9 +102,6 @@ export class ConfirmInfo extends Component {
 
         return (
             <div className='commanInfoStyle'>
-
-
-
                 {
                     loading &&
                     <div>
@@ -138,6 +151,9 @@ export class ConfirmInfo extends Component {
                                 <div className="child-n">
 
                                 </div>
+                            </div>
+                            <div className="btn1-clear child-n">
+
                             </div>
                         </fieldset>
 
@@ -256,6 +272,7 @@ export class ConfirmInfo extends Component {
                                 </div>
                             </div>
                         </fieldset>
+
                     </div>
                 }
 
@@ -289,6 +306,7 @@ export class ConfirmInfo extends Component {
                                     variant='outlined'
                                     onClick={this.back}
                                 > Back </Button>
+
                             </div>
                             <div className="btn1-next child-n" style={{ textAlign: 'right', flex: 1 }}>
                                 <Button
@@ -297,11 +315,16 @@ export class ConfirmInfo extends Component {
                                     color='success'
                                     onClick={handleSubmit}
                                 > Send Mail </Button>
+                                <Button
+                                    variant='outlined'
+                                    onClick={() => window.print()}
+                                > Print </Button>
                             </div>
+
                         </div> :
 
                         <div className="button-wrapper child-wrapper">
-                            <div className="btn1-next child-n" style={{ textAlign: 'right', flex: 1 }}>
+                            <div className="btn1-next child-n" style={{ textAlign: 'right', flex: 1, color: 'white' }}>
                                 <Button
                                     label='Continue'
                                     variant='contained'
@@ -310,6 +333,7 @@ export class ConfirmInfo extends Component {
                             </div>
                         </div>
                 }
+
             </div>
         );
     }

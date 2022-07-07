@@ -14,7 +14,7 @@ const FreeAssessment = () => {
                 </div>
                 <div className="assessment-button">
                     <Button variant='contained' id="btn">
-                        Get here &nbsp; <ArrowCircleRightIcon />
+                        <a href='#asForm'> Get here &nbsp; <ArrowCircleRightIcon /> </a>
                     </Button>
                 </div>
             </div>

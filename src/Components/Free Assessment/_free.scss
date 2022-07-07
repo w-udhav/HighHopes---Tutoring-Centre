@@ -35,13 +35,17 @@
         }
 
         & .assessment-button {
-            // border: 1px solid white;
+            // border: 1px solid black;
 
             text-align: center;
 
             & #btn {
                 font-size: 17px;
                 height: 100%;
+                a {
+                    text-decoration: none;
+                    color: white;
+                }
             }
         }
     }
@@ -49,8 +53,14 @@
 
 .formContainer {
     margin: 0;
+    border: 1px solid #E8E8E8;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
     padding: 0;
-
+    background-image: url('../../assets/annie-spratt-0ZPSX_mQ3xI-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
     & .form-wrapper {
         margin: 0;
         width: 40%;
@@ -62,7 +72,8 @@
             font-weight: bold;
             font-family: sans-serif;
             text-align: center;
-            border: 1px solid;
+            // border: 1px solid;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
             padding: 20px;
             background-color: #2ec2d9e2;
             border-radius: 5px;
@@ -76,13 +87,19 @@
                 padding: 8px 0;
 
                 input {
-                    background-color: white;
+                    // background-color: white;
                     letter-spacing: 1px;
                     font-family: 'Barlow', sans-serif;
                     font-size: 1.2rem;
                 }
             }
+            button {
+                margin: 10px 0;
+                box-sizing: border-box;
+                padding: 10px 50px;
+            }
         }
+
     }
 }
 

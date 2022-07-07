@@ -9,14 +9,14 @@ export class ChildInfo extends Component {
         super(props);
         this.state = {
             formErrors: {
-                StudentName : true,
-                Gender : true,
-                SchoolName : true,
-                Year : true,
-                HomeAddress : true,
-                Suburb : true,
-                PostCode : true,
-                StuMail : true
+                StudentName: true,
+                Gender: true,
+                SchoolName: true,
+                Year: true,
+                HomeAddress: true,
+                Suburb: true,
+                PostCode: true,
+                StuMail: true
             },
             formIsValid: true
         };
@@ -31,7 +31,7 @@ export class ChildInfo extends Component {
 
     render() {
         const { values: { firstName, dob, gender, schoolName, year, homeAdd, subUrb, postCode, studentEmail },
-                handleChange, values } = this.props;
+            handleChange, values } = this.props;
 
         const { formErrors, formIsValid } = this.state;
 
@@ -46,16 +46,16 @@ export class ChildInfo extends Component {
                 if (!firstName) {
                     formIsValid = false;
                     formErrors.StudentName = false;
-                    
+
                     console.log(formErrors);
                     // formErrors['FirstNameErr'] = "First Name is required";
-                    
+
                 } else {
                     formErrors.StudentName = true;
                 }
 
                 // GENDER
-                if (gender=='') {
+                if (gender == '') {
                     formIsValid = false;
                     formErrors.Gender = false;
                     // formErrors['GenderErr'] = "Gender is required";
@@ -63,19 +63,19 @@ export class ChildInfo extends Component {
 
 
                 // YEAR
-                if(!year){
+                if (!year) {
                     formIsValid = false;
                     formErrors.Year = false;
                 } else {
                     var yearPattern = /\d{2}/;
-                    if(!yearPattern.test(year)){
+                    if (!yearPattern.test(year)) {
                         formIsValid = false;
                         formErrors.Year = false;
                     } else { formErrors.Year = true; }
                 }
 
                 // SCHOOL NAME
-                if(!schoolName){
+                if (!schoolName) {
                     formIsValid = false;
                     formErrors.SchoolName = false;
                 } else {
@@ -83,7 +83,7 @@ export class ChildInfo extends Component {
                 }
 
                 // HOME ADDRESS
-                if(!homeAdd){
+                if (!homeAdd) {
                     formIsValid = false;
                     formErrors.HomeAddress = false;
                 } else {
@@ -91,7 +91,7 @@ export class ChildInfo extends Component {
                 }
 
                 // SUBURB
-                if(!subUrb){
+                if (!subUrb) {
                     formIsValid = false;
                     formErrors.Suburb = false;
                 } else {
@@ -99,7 +99,7 @@ export class ChildInfo extends Component {
                 }
 
                 // POSTCODE
-                if(!postCode){
+                if (!postCode) {
                     formIsValid = false;
                     formErrors.PostCode = false;
                 } else {
@@ -107,12 +107,12 @@ export class ChildInfo extends Component {
                 }
 
                 // STUDENT EMAIL
-                if(!studentEmail){
+                if (!studentEmail) {
                     formIsValid = false;
                     formErrors.StuMail = false;
                 } else {
                     var mailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-                    if(!mailPattern.test(studentEmail)) {
+                    if (!mailPattern.test(studentEmail)) {
                         formIsValid = false;
                         formErrors.StuMail = false;
                     } else {
@@ -179,7 +179,7 @@ export class ChildInfo extends Component {
                     </div>
                     <div className="gender child-n">
                         <FormControl>
-                            <FormLabel 
+                            <FormLabel
                                 id='gender'
                                 required
                                 helperText={formIsValid ? "" : "Gender is required"}
@@ -309,6 +309,7 @@ export class ChildInfo extends Component {
                             onClick={handleValidate}
                         > Continue </Button>
                     </div>
+                    
                 </div>
             </div>
         )

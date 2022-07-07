@@ -24,7 +24,7 @@ export class AssessmentForm extends React.Component {
                 subject: "",
                 message: "",
             },
-            mailStatus:'',
+            mailStatus: false,
         }
     }
 
@@ -97,10 +97,10 @@ export class AssessmentForm extends React.Component {
                         subject,
                         message
                     }
-                    console.log(data)
-                    await submitEmail(data);
+                    submitEmail(data)
                     console.log("Email sent")
-                   
+                    this.setState({ mailStatus: true })
+
                 } catch (error) {
                     console.log(error);
                 }
@@ -109,7 +109,7 @@ export class AssessmentForm extends React.Component {
 
 
         return (
-            <div className='formContainer'>
+            <div className='formContainer' id='asForm'>
                 <div className="form-wrapper">
                     <p> Book A Free Assessment Today </p>
                     {

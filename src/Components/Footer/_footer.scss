@@ -4,11 +4,10 @@
 
 .footerContainer {
     background-image: url('../../assets/BACKGROUND-FOOTER-3.jpg');
-    background-size: contain;
     background-position: top;
 
     & .footerWrapper {
-        border: 1px solid black;
+        // border: 1px solid black;
         padding: 50px 0;
         width: 50%;
         text-align: center;
@@ -19,13 +18,89 @@
 
         & .footerHead {
             p {
-                font-size: 2rem;
+                font-size: 2.2rem;
                 font-weight: bold;
-                
+
             }
         }
+
         & .footerLinks {
-            
+            // border: 1px solid white;
+            text-align: center;
+            margin: 40px 0;
+
+            & .nav-wrapp {
+
+
+                ul {
+                    list-style-type: none;
+
+
+                    li {
+                        display: inline-block;
+                        // border: 1px solid white;
+                        padding: 10px;
+
+                        a {
+                            text-decoration: none;
+                            // border: 1px solid white;
+                            color: white;
+                            padding: 20px;
+                        }
+                    }
+                }
+            }
         }
+
+        & .socialMedia {
+            // border: 1px solid white;
+            // padding: 10px;
+
+
+            div {
+                // border: 1px solid white;
+                display: flex;
+                margin-left: 50%;
+                transform: translate(-50%);
+
+                p {
+                    flex: 1;
+
+                    a {
+                        text-decoration: none;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        & .copyright {
+            p {
+                line-height: 28px;
+            }
+        }
+    }
+}
+
+
+@media (min-width:570px) {
+    .footerContainer {
+        background-size: contain;
+
+    }
+
+    .socialMedia div {
+        width: 30%;
+    }
+}
+
+@media (max-width:570px) {
+    .footerContainer {
+        background-size: cover;
+
+    }
+
+    .socialMedia div {
+        width: 100%;
     }
 }
