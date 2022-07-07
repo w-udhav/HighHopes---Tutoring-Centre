@@ -1,0 +1,31 @@
+@import url('../header/_header.scss');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Montserrat&family=Staatliches&display=swap');
+
+
+.footerContainer {
+    background-image: url('../../assets/BACKGROUND-FOOTER-3.jpg');
+    background-size: contain;
+    background-position: top;
+
+    & .footerWrapper {
+        border: 1px solid black;
+        padding: 50px 0;
+        width: 50%;
+        text-align: center;
+        margin-left: 50%;
+        transform: translate(-50%);
+        font-family: 'Barlow', sans-serif;
+        color: white;
+
+        & .footerHead {
+            p {
+                font-size: 2rem;
+                font-weight: bold;
+                
+            }
+        }
+        & .footerLinks {
+            
+        }
+    }
+}

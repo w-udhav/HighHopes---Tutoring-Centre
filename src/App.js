@@ -7,6 +7,7 @@ import Programme from './Components/Programme UI/Programme';
 import About from './Components/About UI/About';
 import ScrollToTop from './ScrollToTop';
 import Contact from './Components/Contact UI/Contact';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path='/about' element={<About />} />
           <Route path='/contact' element={<Contact />} />
         </Routes>
+        <Footer />
       </ScrollToTop>
     </div>
     // </LocalizationProvider>

@@ -23,7 +23,8 @@ export class AssessmentForm extends React.Component {
                 email: "",
                 subject: "",
                 message: "",
-            }
+            },
+            mailStatus:'',
         }
     }
 
@@ -36,26 +37,18 @@ export class AssessmentForm extends React.Component {
         let { name, email, subject, message, description, to, mailsubject } = this.state.user;
 
         const submitEmail = async (data) => {
-            await fetch("https://localhost:3000/send", {
+            console.log(data)
+            await fetch("https://apnacompany.herokuapp.com/send", {
                 method: "POST",
-                headers: {
-                    "Content-type": "application/json",
-                    // 'Accept': 'application/json',
-                    // 'Access-Control-Allow-Origin': 'https://localhost:3000',
-                    // 'withCredentials': true,
-                    // 'Access-Control-Allow-Credentials':'true',
-                    // 'Access-Control-Allow-Methods': 'POST'
-                },
                 body: JSON.stringify(data),
-                // mode:'cors',
-                // credentials: 'include'
+                headers: {
+                    'Content-Type': 'application/json',
+                },
             })
-
         };
 
         const handleSubmit = async e => {
             e.preventDefault();
-            //Validation
             let formErrors = {};
             let formIsValid = true;
             if (formIsValid) {
@@ -104,9 +97,10 @@ export class AssessmentForm extends React.Component {
                         subject,
                         message
                     }
-                    submitEmail(data);
+                    console.log(data)
+                    await submitEmail(data);
                     console.log("Email sent")
-                    this.setState({ mailStatus: true })
+                   
                 } catch (error) {
                     console.log(error);
                 }
