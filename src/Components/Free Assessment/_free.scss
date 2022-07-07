@@ -56,14 +56,13 @@
     border: 1px solid #E8E8E8;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
     padding: 0;
-    background-image: url('../../assets/annie-spratt-0ZPSX_mQ3xI-unsplash.jpg');
+    background-image: url('../../assets/Compressed/annie-spratt-0ZPSX_mQ3xI-unsplashCompressed.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    // background-attachment: fixed;
     
     & .form-wrapper {
         margin: 0;
-        width: 40%;
         margin-left: 50%;
         transform: translate(-50%);
 
@@ -120,6 +119,11 @@
         flex: 0.4;
         margin: 40px;
     }
+
+    .form-wrapper {
+        width: 40%;
+
+    }
 }
 
 @media (max-width:570px) {
@@ -138,5 +142,9 @@
         & #btn {
             width: 200px;
         }
+    }
+    .form-wrapper {
+        width: 90%;
+
     }
 }

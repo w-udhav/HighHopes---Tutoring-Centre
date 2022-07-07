@@ -16,7 +16,7 @@ export class AssessmentForm extends React.Component {
             },
             formIsValid: true,
             user: {
-                to: 'ujjwal pratap singh',
+                to: '',
                 mailsubject: '',
                 description: '',
                 name: "",
@@ -170,14 +170,14 @@ export class AssessmentForm extends React.Component {
                             </form>
                             :
                             <div>
-                                <div class="success-checkmark">
+                                {/* <div class="success-checkmark">
                                     <div class="check-icon">
                                         <span class="icon-line line-tip"></span>
                                         <span class="icon-line line-long"></span>
                                         <div class="icon-circle"></div>
                                         <div class="icon-fix"></div>
                                     </div>
-                                </div>
+                                </div> */}
                                 <div className="mailStatus">
                                     <p className='formSubtitle'> Mail Sent </p>
                                     <p> Thank you for your visit. We will respond to you soon.</p>
