@@ -66,15 +66,16 @@
         list-style-type: none;
         padding: 0; 
         text-align: center;
-        padding: 5px;
-
+        // padding: 5px;
+        border-radius: 10px;
+        background-color: red;
 
         li {
             box-sizing: border-box;
             // border-bottom: 0.2px solid;
             width: 100%;
             padding: 4px 10px;
-            background-color: #ABC9FF;
+            // background-color: red;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
             a {
@@ -85,7 +86,7 @@
                 width: 100%;
                 // background-color: white;
                 padding: 4px;
-                color: #EB4747;
+                color: white;
             }
         }
 

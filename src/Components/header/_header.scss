@@ -3,7 +3,7 @@
 
 .header {
     margin: 0;
-    background: url('../../assets/david-van-dijk-3LTht2nxd34-unsplash.jpg');
+    background: url('../../assets/Compressed/alexis-brown-omeaHbEFlN4-unsplash-Compressed.jpg');
     background-size: cover;
     background-position: center;
     border: 1px solid;
@@ -46,6 +46,12 @@
                 1px 30px 60px rgba(16, 16, 16, 0.4);
 
         }
+
+        p:nth-child(2) {
+            color: white;
+            font-size: 2rem;
+            line-height: 40px;
+        }
     }
 
     & .head-line {
@@ -59,10 +65,11 @@
 .head-nav {
     // border: 1px solid red;
     height: max-content;
+    background-color: rgba(0, 0, 0, 0.558);
+}
 
-    a {
-        color: black;
-    }
+.head-nav * {
+    color: white;
 }
 
 @media (min-width:570px) {
