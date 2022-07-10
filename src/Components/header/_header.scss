@@ -5,7 +5,6 @@
     margin: 0;
     background: url('../../assets/Compressed/alexis-brown-omeaHbEFlN4-unsplash-Compressed.jpg');
     background-size: cover;
-    background-position: center;
     border: 1px solid;
     display: block;
     // background-attachment: fixed;
@@ -48,7 +47,6 @@
         }
 
         p:nth-child(2) {
-            color: white;
             font-size: 2rem;
             line-height: 40px;
         }
@@ -87,7 +85,20 @@
                 font-size: 6rem;
             }
         }
+
+        p:nth-child(2) {
+            color: white;
+            font-size: 2rem;
+            line-height: 40px;
+        }
     }
+
+    .header {
+        background-position: center;
+
+    }
+
+
 }
 
 
@@ -104,5 +115,16 @@
                 font-size: 4rem;
             }
         }
+        p:nth-child(2) {
+            color: black;
+            font-size: 2rem;
+            font-weight: 600;
+            line-height: 40px;
+        }
+    }
+
+    .header {
+        background-position: right;
+
     }
 }
