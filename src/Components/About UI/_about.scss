@@ -14,9 +14,11 @@
         box-shadow: inset 0px -7px 14px -3px rgba(0, 0, 0, 0.72);
 
         .head-nav {
-            color: black;
             backdrop-filter: blur(5px);
             background-color: rgba(255, 255, 255, 0.78);
+        }
+        .head-nav *{
+            color: black;
         }
 
         & .about-head {

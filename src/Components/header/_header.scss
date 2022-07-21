@@ -14,6 +14,13 @@
     -moz-box-shadow: inset 0px -7px 14px -3px rgba(0, 0, 0, 0.72);
     box-shadow: inset 0px -7px 14px -3px rgba(0, 0, 0, 0.72);
 
+    & .head-nav {
+        // border: 1px solid red;
+        height: max-content;
+        backdrop-filter: blur(5px);
+        background-color: rgba(0, 0, 0, 0.558);
+    }
+
     & .head-title {
         // border: 1px solid black;
         // width: 55%;
@@ -55,16 +62,17 @@
     & .head-line {
         font-family: 'Barlow', sans-serif;
         font-size: 1.5rem;
-        padding-left: 10px;
+        // padding-left: 10px;
         line-height: 28px;
+        background-color: rgba(0, 0, 0, 0.517);
+        color: white;
+        padding: 10px 12px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
     }
 }
 
-.head-nav {
-    // border: 1px solid red;
-    height: max-content;
-    background-color: rgba(0, 0, 0, 0.558);
-}
+
 
 .head-nav * {
     color: white;
@@ -87,7 +95,7 @@
         }
 
         p:nth-child(2) {
-            color: white;
+            // color: white;
             font-size: 2rem;
             line-height: 40px;
         }
@@ -115,10 +123,11 @@
                 font-size: 4rem;
             }
         }
+
         p:nth-child(2) {
-            color: black;
+            // color: black;
             font-size: 2rem;
-            font-weight: 600;
+            text-align: center;
             line-height: 40px;
         }
     }

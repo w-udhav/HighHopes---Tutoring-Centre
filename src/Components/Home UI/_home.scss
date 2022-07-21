@@ -5,8 +5,10 @@
     & .intro-wrapper {
         box-sizing: border-box;
 
-        background: url('../../assets/Compressed/bench-accounting-nvzvOPQW0gc-unsplash--Compressed.jpg');
-        background-position: bottom;
+        // background: url('../../assets/Compressed/bench-accounting-nvzvOPQW0gc-unsplash--Compressed.jpg');
+        background-image: url('../../assets/Compressed/pexels-leah-kelley-373465.jpg');
+        background-position: center;
+        // background-attachment: fixed;
         height: 100vh;
         background-size: cover;
         z-index: -1;
@@ -29,7 +31,7 @@
                 z-index: 1;
                 max-width: max-content;
 
-                background: rgba(255, 255, 255, 0.711);
+                background: rgba(255, 255, 255, 0.839);
 
                 // line-height: 4.1rem;
                 font-family: 'Staatliches', cursive;
