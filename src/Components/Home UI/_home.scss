@@ -6,12 +6,13 @@
         box-sizing: border-box;
 
         // background: url('../../assets/Compressed/bench-accounting-nvzvOPQW0gc-unsplash--Compressed.jpg');
-        background-image: url('../../assets/Compressed/pexels-leah-kelley-373465.jpg');
+        background-image: url('../../assets/Compressed/pexels-rodnae-productions-8363163.jpg');
         background-position: center;
-        // background-attachment: fixed;
-        height: 100vh;
+        background-attachment: fixed;
+        // height: 100vh;
         background-size: cover;
         z-index: -1;
+        // margin: 20vh 0;
 
         // img{
         //     width: 99.9%;
@@ -30,6 +31,7 @@
                 border-radius: 20px 0;
                 z-index: 1;
                 max-width: max-content;
+                margin: 20vh auto;
 
                 background: rgba(255, 255, 255, 0.839);
 
