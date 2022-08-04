@@ -4,7 +4,8 @@
 
 .enrol-head-wrapper{
     margin: 0;
-    background: url('../../assets/Compressed/lum3n--RBuQ2PK_L8-unsplash.jpg');
+    // background: url('../../assets/Compressed/lum3n--RBuQ2PK_L8-unsplash.jpg');
+    background: url('../../assets/pexels-lumn-587958.jpg');
     background-size: cover;
     
     width: 100%;
@@ -13,6 +14,10 @@
 
     .head-nav *{
         color: black;
+    }
+    .head-nav{
+        backdrop-filter: blur(2px);
+
     }
 
     & .enrol-head{
@@ -27,7 +32,7 @@
             background-color: #666666;
             background-clip: text;
             color: transparent;
-            text-shadow: rgba(255, 124, 168, 0.436) 0px 3px 3px;
+            text-shadow: rgba(225, 92, 87, 0.8) 0px 3px 3px;
             // text-shadow: #F2D1D1 0px 3px 3px;
 
             font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -293,7 +298,7 @@
     .enrol-head{
 
         p{
-            font-size: 4rem;
+            font-size: 5rem;
         }
     }
     .form-container{
