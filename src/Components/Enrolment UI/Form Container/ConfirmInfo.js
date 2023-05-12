@@ -38,7 +38,7 @@ export class ConfirmInfo extends Component {
 
         const submitEmail = async (data) => {
             console.log(data)
-            await fetch("https://apnacompany.herokuapp.com/sendform", {
+            await fetch("https://tutoring-server.onrender.com/sendform", {
                 method: "POST",
                 body: JSON.stringify(data),
                 headers: {
