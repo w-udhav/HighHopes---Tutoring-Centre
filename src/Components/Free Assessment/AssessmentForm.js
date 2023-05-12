@@ -38,7 +38,7 @@ export class AssessmentForm extends React.Component {
 
         const submitEmail = async (data) => {
             console.log(data)
-            await fetch("https://apnacompany.herokuapp.com/send", {
+            await fetch("https://tutoring-server.onrender.com/send", {
                 method: "POST",
                 body: JSON.stringify(data),
                 headers: {
